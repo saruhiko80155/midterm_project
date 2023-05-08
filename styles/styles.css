@@ -1,0 +1,515 @@
+:root {
+    --bgcolor: #C3A6A0;
+    --maincolor: #F7F1F0;
+    --minorcolor: #A15C38;
+    --emphasize: #262220;
+}
+
+/* 捐款頁面斷點 */
+@media screen and (max-width:992px) {
+    #mydonate1 {
+        display: none;
+    }
+
+    #mydonate2 {
+        display: block !important;
+    }
+
+    #mydonatebgcolor {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+/* 首頁頁面斷點 */
+@media screen and (max-width:992px) {
+    #indexmedia {
+        max-width: 50vw;
+    }
+
+    div[class~="workbggradient"] img {
+        max-width: 300px;
+    }
+
+    div[class~="workbggradient"] h4,
+    div[class~="workbggradient"] p {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    div[class~="workbggradient"] div[class~="float-end"] {
+        float: none !important;
+    }
+
+    div[class~="workbggradient"] div[class~="workcontentpadding"] {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    #indextitle1 {
+        position: relative !important;
+    }
+}
+
+
+.mybgcolor1 {
+    background-color: var(--bgcolor);
+}
+
+.mybgcolor2 {
+    background-color: var(--maincolor);
+}
+
+.mybgcolor3 {
+    background-color: var(--minorcolor);
+}
+
+.mybgcolor4 {
+    background-color: var(--emphasize);
+}
+
+.myfontcolor1 {
+    color: var(--bgcolor);
+}
+
+.myfontcolor2 {
+    color: var(--maincolor);
+}
+
+.myfontcolor3 {
+    color: var(--minorcolor);
+}
+
+.myfontcolor4 {
+    color: var(--emphasize);
+}
+
+/* 改字型 */
+/* body{font-family: arial,"Microsoft JhengHei","微軟正黑體",sans-serif !important;} */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--minorcolor);
+}
+
+ul a[class~="nav-link"]:hover {
+    background-color: var(--minorcolor);
+}
+
+/* 右邊固定的兩個link */
+.myfixedlink {
+    position: fixed;
+    bottom: 200px;
+    right: 10px;
+}
+
+.myfixedlink2 {
+    position: fixed;
+    bottom: 120px;
+    right: 10px;
+}
+
+/* nav[class~="nav-pills"]{
+    --bs-nav-pills-link-active-bg:: #A15C38;
+} */
+
+/* 左邊sidebar */
+.nav-pills {
+    --bs-nav-pills-link-active-bg: var(--minorcolor);
+}
+
+.mysidebarfixed {
+    /* position: fixed;
+    top: 150px;
+    left: 5px; */
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+
+}
+
+.nav {
+    --bs-nav-link-color: var(--emphasize);
+    --bs-nav-link-hover-color: var(--bgcolor);
+}
+
+/* .stories{
+    width: 70vh;
+} */
+/* card置中 */
+.card,.card2 {
+    margin: 0 auto;
+    float: none;
+}
+
+#mydonate2 {
+    display: none;
+    width: 80vw;
+    max-width: 600px;
+    /* -webkit-mask-image:linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%); */
+}
+
+#readmorecontent {
+    display: none;
+}
+
+.mydonategradient {
+    /* background: linear-gradient(transparent 0%,transparent 0%,transparent 0%,rgba(0,0,0,0.5)100%); */
+    /* background: rgb(0, 0, 0); */
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6542857142857144) 10%, rgba(0, 0, 0, 0.39714285714285713) 25%, rgba(255, 255, 255, 0) 50%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+}
+
+#donatebuttom1:active,
+#donatebuttom1:visited,
+#donatebuttom2:active,
+#donatebuttom2:visited {
+    background-color: #A15C38;
+    color: #F7F1F0;
+}
+
+.btn-check:checked+.btn {
+    color: var(--minorcolor);
+}
+
+#donateform2 {
+    display: none;
+}
+
+#donateform3 {
+    display: none;
+}
+
+.campaignblock {
+    width: 100%;
+    height: 300px;
+}
+
+.campaignblockimg {
+    width: 100%;
+    height: 100%;
+}
+
+/* 封面風箏動畫 */
+#indexmedia {
+    position: absolute;
+    top: 50px;
+    left: 50vw;
+    animation-name: kite;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes kite {
+    0% {
+        top: 50px;
+        left: 40vw;
+    }
+
+    50% {
+        top: 50px;
+        left: 20vw;
+    }
+
+    100% {
+        top: 50px;
+        left: 40vw;
+    }
+}
+
+/* 首頁工作內容背景底色gradient */
+.workbggradient {
+    background: rgb(161, 92, 56);
+    background: radial-gradient(circle, rgba(161, 92, 56, 0.5032397408207343) 0%, rgba(161, 92, 56, 0.39956803455723544) 25%, rgba(161, 92, 56, 0.39956803455723544) 50%, rgba(161, 92, 56, 0.29589632829373647) 75%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* float那個的 */
+.workcontentpadding {
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+/* 工作圖案的大小 */
+.workimgsize {
+    height: 200px;
+}
+
+/* 活動網格大小調整 */
+.eventmaxwidth {
+    max-width: 1000px;
+}
+
+.eventmdw {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.eventimgclick {
+    border: var(--emphasize) 1px solid;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    position: relative;
+    transition-duration: 1s;
+}
+
+/* 活動圖片遮罩 */
+div[class~="eventimgclick"]:hover .eventbg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(8, 8, 8, 0.6742339691558441) 25%, rgba(4, 4, 4, 0.39956803455723544) 50%, rgba(0, 0, 0, 0.29589632829373647) 75%, rgba(255, 255, 255, 0) 100%);
+}
+
+.eventtext {
+    position: absolute;
+    display: none;
+    left: 5%;
+    right: 5%;
+    bottom: 2%;
+    color: white;
+    padding: 1%;
+    /* border-left: 1px solid white;
+    border-right: 1px solid white; */
+}
+
+div[class~="eventimgclick"]:hover .eventtext {
+    display: block;
+}
+
+div[class~="eventimgclick"]:hover {
+    width: 105%;
+}
+
+
+.eventmdw2 {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.eventmdh1 {
+    height: 60%;
+}
+
+.eventmdh2 {
+    height: 40%;
+}
+
+.eventmdh3 {
+    height: 40%;
+}
+
+.eventmdh4 {
+    height: 40%;
+}
+
+.eventmdh5 {
+    height: 20%;
+}
+
+.eventmdh6 {
+    height: 30%;
+}
+
+.eventmdh7 {
+    height: 20%;
+}
+
+.eventmdh8 {
+    height: 50%;
+}
+
+/* 活動model */
+.mymodal {
+    display: none;
+    position: fixed;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.5);
+    /* overflow: auto; */
+}
+
+/* Modal Content */
+.modelcontent {
+    background-color: var(--maincolor);
+    padding: 20px;
+    width: 700px;
+    /* padding: 5%; */
+    position: relative;
+    height: 90vh;
+    /* background-image: url(../image/pexels-mikhail-nilov-7699052.jpg);
+    background-size: cover;
+    background opacity: 0.5; */
+}
+
+.modaltext {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5%;
+}
+
+/* The Close Button */
+.closesign {
+    font-size: 30px;
+}
+
+.closesign:hover {
+    color: var(--emphasize);
+    cursor: pointer;
+}
+
+/* modal響應式 */
+@media screen and (max-width:768px) {
+    div[class~="modelcontent"] {
+        width: 90vw;
+    }
+
+    .disappear {
+        display: none;
+    }
+}
+
+.nounderline {
+    text-decoration: none;
+    color: black;
+}
+
+/* 主要議題背景圖型 */
+.para {
+    width: 100%;
+    height: 350px;
+    background-color: var(--bgcolor);
+    clip-path: polygon(0 39%, 100% 39%, 100% 100%, 44% 100%);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.para2 {
+    width: 50%;
+    height: 250px;
+    background-color: var(--emphasize);
+    opacity: 0.7;
+    clip-path: polygon(42% 45%, 100% 45%, 61% 100%, 0 100%);
+    position: absolute;
+    bottom: 100px;
+    right: 0;
+}
+
+.para3 {
+    width: 60%;
+    height: 250px;
+    position: absolute;
+    bottom: 150px;
+    right: 0;
+}
+
+.onlyposition {
+    position: relative;
+    min-height: fit-content;
+}
+
+@media screen and (max-width:768px) {
+    .para {
+        width: 100%;
+        height: 150px;
+        background-color: var(--bgcolor);
+        clip-path: polygon(0 39%, 100% 39%, 100% 100%, 44% 100%);
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .para2 {
+        width: 50%;
+        height: 200px;
+        background-color: var(--emphasize);
+        opacity: 0.7;
+        clip-path: polygon(42% 45%, 100% 45%, 61% 100%, 0 100%);
+        position: absolute;
+        bottom: 50px;
+        right: 0;
+    }
+
+    .para3 {
+        width: 50%;
+        height: auto;
+        position: absolute;
+        bottom: 50px;
+    }
+
+    .onlyposition {
+        position: relative;
+        min-height: 300px;
+        margin: 30px;
+    }
+
+    .mytextcenter {
+        text-align: center;
+    }
+    /* .onlyposition{
+        opacity: 0.3;
+    } */
+}
+
+/* 愛心圖案 */
+.heart-container {
+    height: 40px; /* 设置父元素高度为40px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50px;
+    left: 60vw;
+  }
+  
+  .heart {
+    width: 60px; /* 设置爱心宽度为60px */
+    height: calc(60px * 1.3); /* 根据宽度计算出高度 */
+    position: relative;
+  }
+  
+  .heart::before,
+  .heart::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background: var(--minorcolor);
+    border-radius: 50% 50% 0 0;
+    transform: translateX(-50%) rotate(-45deg);
+    transform-origin: 0 100%;
+  }
+  
+  .heart::after {
+    left: 0;
+    transform: translateX(-50%) rotate(45deg);
+    transform-origin: 100% 100%;
+  }
+  
+  
+  
